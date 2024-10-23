@@ -1,6 +1,8 @@
 button {
     height: 20px;
     width: 50px;
+    margin: 0;
+    padding: 0;
 }
 
 #calculator {
@@ -8,7 +10,6 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
     height: 500px;
     width: 500px;
 }
@@ -18,7 +19,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     height: 400px;
-    width: 300px;
+    width: 500px;
 }
 
 #screen {
