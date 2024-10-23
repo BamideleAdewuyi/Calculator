@@ -28,4 +28,5 @@ button {
     text-align: right;
     display: flex;
     flex-direction: column-reverse;
+    font-size: 100px;
 }
