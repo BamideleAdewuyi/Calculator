@@ -25,4 +25,7 @@ button {
 #screen {
     outline: 1px solid green;
     height: 100px;
+    text-align: right;
+    display: flex;
+    flex-direction: column-reverse;
 }
