@@ -4,6 +4,7 @@ button {
 }
 
 #calculator {
+    outline: 2px solid  orange;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,6 +16,8 @@ button {
     outline: 1px solid red;
     display: flex;
     flex-wrap: wrap;
+    height: 400px;
+    width: 100px;
 }
 
 #screen {
