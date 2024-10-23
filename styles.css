@@ -5,6 +5,7 @@ button {
 
 #calculator {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 500px;
     width: 500px;
