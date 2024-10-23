@@ -1,13 +1,18 @@
-* {
-    outline: 1px solid red;
-  }
+
 
 #calculator {
     display: flex;
     justify-content: center;
+    height: 500px;
+    width: 500px;
 }
 
 #keyboard {
+    outline: 1px solid red;
     display: flex;
     flex-wrap: wrap;
+}
+
+#screen {
+    outline: 1px solid green;
 }
