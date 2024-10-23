@@ -24,4 +24,5 @@ button {
 
 #screen {
     outline: 1px solid green;
+    height: 100px;
 }
