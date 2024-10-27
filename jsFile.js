@@ -6,6 +6,8 @@ const nums = document.querySelectorAll(".number");
 const clear = document.querySelector("#clear");
 const screen = document.querySelector("#screen");
 
+screen.innerText = firstNum;
+
 clear.addEventListener("click", () => {
     screen.innerText = "0";
 })
