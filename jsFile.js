@@ -7,14 +7,14 @@ const nums = document.querySelectorAll(".number");
 const clear = document.querySelector("#clear");
 const screen = document.querySelector("#screen");
 
-screen.innerText = firstNum;
+screen.innerText = display;
 
 clear.addEventListener("click", () => {
-    firstNum = "0";
-    screen.innerText = firstNum;
+    display = "0";
+    screen.innerText = display;
 })
 
 nums.forEach(el => el.addEventListener ("click", () =>{
-    firstNum = firstNum.concat('', String(el.id));
-    screen.innerText = firstNum;
+    display = display.concat('', String(el.id));
+    screen.innerText = display;
 }));
