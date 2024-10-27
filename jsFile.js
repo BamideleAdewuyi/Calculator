@@ -4,3 +4,7 @@ let operator;
 
 const nums = document.querySelector(".number");
 const clear = document.querySelector("#clear");
+
+clear.addEventListener("click", () => {
+    
+})
