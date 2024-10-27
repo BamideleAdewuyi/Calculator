@@ -9,6 +9,20 @@ const screen = document.querySelector("#screen");
 
 screen.innerText = display;
 
+function operate(num1, num2, op) {
+    switch(op) {
+        case "/":
+            return num1 / num2;
+        case "+":
+            return num1 + num2;
+        case "-":
+            return num1 - num2;
+        case "*":
+            return num1 * num2;
+    }
+    return num1opnum2;
+}
+
 clear.addEventListener("click", () => {
     display = 0;
     screen.innerText = display;
