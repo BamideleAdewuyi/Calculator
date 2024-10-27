@@ -13,5 +13,6 @@ clear.addEventListener("click", () => {
 })
 
 nums.forEach(el => el.addEventListener ("click", () =>{
-    screen.innerText = el.id;
+    firstNum = firstNum.concat('', String(el.id));
+    screen.innerText = firstNum;
 }));
