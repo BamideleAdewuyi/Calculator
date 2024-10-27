@@ -11,3 +11,7 @@ screen.innerText = firstNum;
 clear.addEventListener("click", () => {
     screen.innerText = "0";
 })
+
+nums.forEach(el => el.addEventListener ("click", () =>{
+    screen.innerText = el.id;
+}));
