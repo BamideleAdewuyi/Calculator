@@ -18,6 +18,12 @@ nums.forEach(el => el.addEventListener ("click", () =>{
     if (el.id == 0 && display == 0) {
         return;
     }
-    display = display + '' + el.id;
-    screen.innerText = display;
+    if (display == 0) {
+        display = el.id;
+        screen.innerText = display;
+    }
+    else {
+        display = display + '' + el.id;
+        screen.innerText = display;
+    }
 }));
