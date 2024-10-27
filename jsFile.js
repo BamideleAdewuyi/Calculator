@@ -9,7 +9,8 @@ const screen = document.querySelector("#screen");
 screen.innerText = firstNum;
 
 clear.addEventListener("click", () => {
-    screen.innerText = "0";
+    firstNum = "0";
+    screen.innerText = firstNum;
 })
 
 nums.forEach(el => el.addEventListener ("click", () =>{
