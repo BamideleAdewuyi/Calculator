@@ -29,16 +29,20 @@ clear.addEventListener("click", () => {
     screen.innerText = display;
 })
 
-nums.forEach(el => el.addEventListener ("click", () =>{
-    if (el.id == 0 && display == 0) {
-        return;
-    }
-    if (display == 0) {
-        display = el.id;
-        screen.innerText = display;
-    }
-    else {
-        display = display + '' + el.id;
-        screen.innerText = display;
-    }
-}));
+function editNum1(button) {
+    button.addEventListener("click", () => {
+        if (button.id == 0 && display == 0) {
+            return;
+        }
+        if (display == 0) {
+            display = button.id;
+            screen.innerText = display;
+        }
+        else {
+            display = display + '' + button.id;
+            screen.innerText = display;
+        }
+    })
+};
+
+nums.forEach(num => editNum1(num));
