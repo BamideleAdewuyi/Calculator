@@ -36,10 +36,12 @@ function editNum1(button) {
         }
         if (display == 0) {
             display = button.id;
+            firstNum = button.id;
             screen.innerText = display;
         }
         else {
             display = display + '' + button.id;
+            firstNum = firstNum + '' + button.id;
             screen.innerText = display;
         }
     })
