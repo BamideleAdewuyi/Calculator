@@ -4,6 +4,7 @@ let display = 0;
 let operator;
 
 const nums = document.querySelectorAll(".number");
+const operators = document.querySelectorAll(".operator");
 const clear = document.querySelector("#clear");
 const screen = document.querySelector("#screen");
 
