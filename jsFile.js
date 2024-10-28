@@ -28,6 +28,8 @@ function operate(num1, num2, op) {
 
 clear.addEventListener("click", () => {
     display = 0;
+    firstNum = 0;
+    secondNum = 0;
     screen.innerText = display;
 })
 
@@ -50,3 +52,6 @@ function editNum1(button) {
 };
 
 nums.forEach(num => editNum1(num));
+
+// Make operators listen and change operator variable. Also add event listener to numbers that updates secondNum
+// make = sign call operate function and change screen. Also removes event listener where for updating secondNum and sets secondNum to 0.
