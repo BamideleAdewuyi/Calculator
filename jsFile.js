@@ -20,6 +20,8 @@ function operate(num1, num2, op) {
             return num1 - num2;
         case "*":
             return num1 * num2;
+        case "=":
+            return num1;
     }
     return num1opnum2;
 }
@@ -43,10 +45,8 @@ function editNum1(button) {
             display = display + '' + button.id;
             firstNum = display;
             screen.innerText = display;
-            console.log(firstNum);
         }
     })
 };
 
 nums.forEach(num => editNum1(num));
-
