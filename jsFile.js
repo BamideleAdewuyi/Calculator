@@ -36,13 +36,14 @@ function editNum1(button) {
         }
         if (display == 0) {
             display = button.id;
-            firstNum = button.id;
+            firstNum = display;
             screen.innerText = display;
         }
         else {
             display = display + '' + button.id;
-            firstNum = firstNum + '' + button.id;
+            firstNum = display;
             screen.innerText = display;
+            console.log(firstNum);
         }
     })
 };
