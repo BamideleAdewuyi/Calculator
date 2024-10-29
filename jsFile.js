@@ -2,6 +2,7 @@ let firstNum = 0;
 let secondNum = 0;
 let display = 0;
 let operator = "=";
+let pair = [];
 
 const nums = document.querySelectorAll(".number");
 const operators = document.querySelectorAll(".operator");
@@ -37,17 +38,17 @@ function clickNums(button) {
     button.addEventListener("click", () => {
         if (String(display).length < 9) {
             if (button.id == 0 && display == 0) {
-                firstNum = button.id;
+                // firstNum = button.id;
                 return;
             }
             if (display == 0) {
                 display = button.id;
-                firstNum = button.id;
+                // firstNum = button.id;
                 screen.innerText = display;
             }
             else {
                 display = display + '' + button.id;
-                firstNum = button.id;
+                // firstNum = button.id;
                 screen.innerText = display;
             }
         }
