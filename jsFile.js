@@ -3,6 +3,7 @@ let secondNum = 0;
 let display = 0;
 let operator = "=";
 let pair = [];
+let onOff = 0;
 
 const nums = document.querySelectorAll(".number");
 const operators = document.querySelectorAll(".operator");
