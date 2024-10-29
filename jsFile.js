@@ -59,6 +59,7 @@ function clickNums(button) {
 
 function editOp(button) {
     button.addEventListener("click", () => {
+        onOff = 1;
         operator = button.id;
         firstNum = display;
         display = 0;
