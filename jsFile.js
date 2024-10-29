@@ -33,7 +33,7 @@ clear.addEventListener("click", () => {
     screen.innerText = display;
 })
 
-function editNum1(button) {
+function clickNums(button) {
     button.addEventListener("click", () => {
         if (String(display).length < 9) {
             if (button.id == 0 && display == 0) {
@@ -61,7 +61,7 @@ function editOp(button) {
     
 };
 
-nums.forEach(num => editNum1(num));
+nums.forEach(num => clickNums(num));
 
 operators.forEach(op => editOp(op));
 
