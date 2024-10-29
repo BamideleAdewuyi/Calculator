@@ -37,14 +37,17 @@ function clickNums(button) {
     button.addEventListener("click", () => {
         if (String(display).length < 9) {
             if (button.id == 0 && display == 0) {
+                firstNum = button.id;
                 return;
             }
             if (display == 0) {
                 display = button.id;
+                firstNum = button.id;
                 screen.innerText = display;
             }
             else {
                 display = display + '' + button.id;
+                firstNum = button.id;
                 screen.innerText = display;
             }
         }
@@ -56,7 +59,7 @@ function editOp(button) {
         operator = button.id;
         firstNum = display;
         display = 0;
-        // screen.innerText = display;
+        
     })
     
 };
