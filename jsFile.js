@@ -7,6 +7,7 @@ const nums = document.querySelectorAll(".number");
 const operators = document.querySelectorAll(".operator");
 const clear = document.querySelector("#clear");
 const screen = document.querySelector("#screen");
+const equals = document.querySelector("#equals");
 
 screen.innerText = display;
 
@@ -21,9 +22,8 @@ function operate(num1, num2, op) {
         case "*":
             return num1 * num2;
         case "=":
-            return num1;
+            return screen.innerText;
     }
-    return num1opnum2;
 }
 
 clear.addEventListener("click", () => {
@@ -35,23 +35,42 @@ clear.addEventListener("click", () => {
 
 function editNum1(button) {
     button.addEventListener("click", () => {
-        if (button.id == 0 && display == 0) {
-            return;
-        }
-        if (display == 0) {
-            display = button.id;
-            firstNum = display;
-            screen.innerText = display;
-        }
-        else {
-            display = display + '' + button.id;
-            firstNum = display;
-            screen.innerText = display;
+        if (String(display).length < 9) {
+            if (button.id == 0 && display == 0) {
+                return;
+            }
+            if (display == 0) {
+                display = button.id;
+                screen.innerText = display;
+            }
+            else {
+                display = display + '' + button.id;
+                screen.innerText = display;
+            }
         }
     })
 };
 
+function editOp(button) {
+    button.addEventListener("click", () => {
+        operator = button.id;
+        firstNum = display;
+        display = 0;
+        // screen.innerText = display;
+    })
+    
+};
+
 nums.forEach(num => editNum1(num));
 
-// Make operators listen and change operator variable. Also add event listener to numbers that updates secondNum
-// make = sign call operate function and change screen. Also removes event listener where for updating secondNum and sets secondNum to 0.
+operators.forEach(op => editOp(op));
+
+equals.addEventListener("click", () => {
+    secondNum = display;
+    console.log("firstNum: " + firstNum + " secondNum: " + secondNum + " operator: " + operator);
+    let ans = operate(Number(firstNum), Number(secondNum), operator);
+    display = ans;
+    screen.innerText = display;
+    operator = "=";
+    // secondNum = 0;
+})
