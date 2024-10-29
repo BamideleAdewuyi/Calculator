@@ -85,9 +85,11 @@ operators.forEach(op => editOp(op));
 equals.addEventListener("click", () => {
     secondNum = display;
     console.log("firstNum: " + firstNum + " secondNum: " + secondNum + " operator: " + operator);
-    let ans = operate(Number(firstNum), Number(secondNum), operator);
+    let ans = operate(Number(pair[0]), Number(pair[1]), operator);
     display = ans;
     screen.innerText = display;
+    pair = [ans];
+    onOff = 0;
     operator = "=";
     // secondNum = 0;
 })
