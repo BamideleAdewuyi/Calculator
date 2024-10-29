@@ -46,11 +46,15 @@ function clickNums(button) {
             if (display == 0) {
                 display = button.id;
                 // firstNum = button.id;
+                pair[onOff] = display;
+                console.log(pair);
                 screen.innerText = display;
             }
             else {
                 display = display + '' + button.id;
                 // firstNum = button.id;
+                pair[onOff] = display;
+                console.log(pair);
                 screen.innerText = display;
             }
         }
