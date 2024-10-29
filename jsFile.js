@@ -33,6 +33,7 @@ clear.addEventListener("click", () => {
     firstNum = 0;
     secondNum = 0;
     pair = [];
+    onOff = 0;
     screen.innerText = display;
 })
 
