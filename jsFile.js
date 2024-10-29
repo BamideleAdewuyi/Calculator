@@ -70,6 +70,7 @@ function editOp(button) {
         if (pair.length == 2) {
             let ans = operate(Number(pair[0]), Number(pair[1]), operator);
             screen.innerText = ans;
+            pair = [ans];
         }
         
     })
