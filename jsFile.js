@@ -84,12 +84,20 @@ operators.forEach(op => editOp(op));
 
 equals.addEventListener("click", () => {
     secondNum = display;
-    console.log("firstNum: " + firstNum + " secondNum: " + secondNum + " operator: " + operator);
-    let ans = operate(Number(pair[0]), Number(pair[1]), operator);
-    display = ans;
-    screen.innerText = display;
-    pair = [ans];
-    onOff = 0;
+    console.log("pair: " + pair + " operator: " + operator);
+    if (pair.length == 2) {
+        let ans = operate(Number(pair[0]), Number(pair[1]), operator);
+        display = ans;
+        screen.innerText = display;
+        pair = [ans];
+    }
+    else {
+        let ans = operate(Number(pair[0]), Number(pair[0]), operator);
+        display = ans;
+        screen.innerText = display;
+        pair = [ans];
+    }
     operator = "=";
+    onOff = 0;
     // secondNum = 0;
 })
