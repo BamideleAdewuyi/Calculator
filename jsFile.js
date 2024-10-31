@@ -64,15 +64,17 @@ function clickNums(button) {
 
 function editOp(button) {
     button.addEventListener("click", () => {
-        onOff = 1;
-        operator = button.id;
-        firstNum = display;
-        display = 0;
-        if (pair.length == 2) {
+        if (pair.length == 2 && operator != "=") {
             let ans = operate(Number(pair[0]), Number(pair[1]), operator);
             screen.innerText = ans;
+            operator = button.id;
             pair = [ans];
         }
+        else {
+            operator = button.id;
+        }
+        onOff = 1;
+        display = 0;
         
     })
     
