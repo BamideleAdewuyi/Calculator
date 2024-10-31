@@ -48,14 +48,12 @@ function clickNums(button) {
                 display = button.id;
                 // firstNum = button.id;
                 pair[onOff] = display;
-                console.log(pair);
                 screen.innerText = display;
             }
             else {
                 display = display + '' + button.id;
                 // firstNum = button.id;
                 pair[onOff] = display;
-                console.log(pair);
                 screen.innerText = display;
             }
         }
@@ -86,7 +84,6 @@ operators.forEach(op => editOp(op));
 
 equals.addEventListener("click", () => {
     secondNum = display;
-    console.log("pair: " + pair + " operator: " + operator);
     if (pair.length == 2) {
         let ans = operate(Number(pair[0]), Number(pair[1]), operator);
         display = ans;
@@ -101,5 +98,4 @@ equals.addEventListener("click", () => {
     }
     operator = "=";
     onOff = 0;
-    // secondNum = 0;
 })
