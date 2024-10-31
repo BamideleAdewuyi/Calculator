@@ -1,5 +1,3 @@
-let firstNum = 0;
-let secondNum = 0;
 let display = 0;
 let operator = "=";
 let pair = [];
@@ -30,8 +28,6 @@ function operate(num1, num2, op) {
 
 clear.addEventListener("click", () => {
     display = 0;
-    firstNum = 0;
-    secondNum = 0;
     pair = [];
     onOff = 0;
     screen.innerText = display;
@@ -41,18 +37,15 @@ function clickNums(button) {
     button.addEventListener("click", () => {
         if (String(display).length < 9) {
             if (button.id == 0 && display == 0) {
-                // firstNum = button.id;
                 return;
             }
             if (display == 0) {
                 display = button.id;
-                // firstNum = button.id;
                 pair[onOff] = display;
                 screen.innerText = display;
             }
             else {
                 display = display + '' + button.id;
-                // firstNum = button.id;
                 pair[onOff] = display;
                 screen.innerText = display;
             }
@@ -83,7 +76,6 @@ nums.forEach(num => clickNums(num));
 operators.forEach(op => editOp(op));
 
 equals.addEventListener("click", () => {
-    secondNum = display;
     if (pair.length == 2) {
         let ans = operate(Number(pair[0]), Number(pair[1]), operator);
         display = ans;
