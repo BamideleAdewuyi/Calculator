@@ -86,7 +86,12 @@ equals.addEventListener("click", () => {
     if (pair.length == 2) {
         let ans = operate(Number(pair[0]), Number(pair[1]), operator);
         ans = rounded(ans, 7);
-        ans = String(ans).slice(0, 9);
+        if (String(ans)[8] == ".") {
+            ans = String(ans).slice(0, 8);
+        }
+        else {
+            ans = String(ans).slice(0, 9);
+        }
         display = ans;
         screen.innerText = display;
         pair = [ans];
@@ -94,6 +99,12 @@ equals.addEventListener("click", () => {
     else {
         let ans = operate(Number(pair[0]), Number(pair[0]), operator);
         ans = rounded(ans, 7);
+        if (String(ans)[8] == ".") {
+            ans = String(ans).slice(0, 8);
+        }
+        else {
+            ans = String(ans).slice(0, 9);
+        }
         ans = String(ans).slice(0, 9);
         display = ans;
         screen.innerText = display;
