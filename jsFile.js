@@ -13,7 +13,7 @@ screen.innerText = display;
 
 function rounded(num, precision) {
     let multiplier = Math.pow(10, precision || 0);
-    return Math.round(value * multiplier) / multiplier;
+    return Math.round(num * multiplier) / multiplier;
 }
 
 
