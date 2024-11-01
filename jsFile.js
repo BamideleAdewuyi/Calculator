@@ -88,6 +88,12 @@ equals.addEventListener("click", () => {
         ans = rounded(ans, 7);
         if (ans > 999999999) {
             ans = Number(ans).toExponential();
+            if (String(ans)[8] == ".") {
+                ans = String(ans).slice(0, 8);
+            }
+            else {
+                ans = String(ans).slice(0, 9);
+            }
         }
         else {
             if (String(ans)[8] == ".") {
@@ -108,6 +114,12 @@ equals.addEventListener("click", () => {
         ans = rounded(ans, 7);
         if (ans > 999999999) {
             ans = Number(ans).toExponential();
+            if (String(ans)[8] == ".") {
+                ans = String(ans).slice(0, 8);
+            }
+            else {
+                ans = String(ans).slice(0, 9);
+            }
         }
         else {
             if (String(ans)[8] == ".") {
