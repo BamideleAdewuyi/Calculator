@@ -11,6 +11,12 @@ const equals = document.querySelector("#equals");
 
 screen.innerText = display;
 
+function rounded(num, precision) {
+    let multiplier = Math.pow(10, precision || 0);
+    return Math.round(value * multiplier) / multiplier;
+}
+
+
 function operate(num1, num2, op) {
     switch(op) {
         case "/":
