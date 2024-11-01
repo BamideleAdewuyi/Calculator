@@ -98,57 +98,15 @@ operators.forEach(op => editOp(op));
 
 equals.addEventListener("click", () => {
     if (pair.length == 2) {
-        let ans = operate(Number(pair[0]), Number(pair[1]), operator);
-        ans = roundAns(ans);
-        // ans = rounded(ans, 7);
-        // if (ans > 999999999) {
-        //     ans = Number(ans).toExponential();
-        //     if (String(ans)[8] == ".") {
-        //         ans = String(ans).slice(0, 8);
-        //     }
-        //     else {
-        //         ans = String(ans).slice(0, 9);
-        //     }
-        // }
-        // else {
-        //     if (String(ans)[8] == ".") {
-        //         ans = String(ans).slice(0, 8);
-        //     }
-        //     else {
-        //         ans = String(ans).slice(0, 9);
-        //     }
-        // }
-        
-        
-        display = ans;
-        screen.innerText = display;
-        pair = [ans];
+        ans = operate(Number(pair[0]), Number(pair[1]), operator);
     }
     else {
-        let ans = operate(Number(pair[0]), Number(pair[0]), operator);
-        ans = roundAns(ans);
-        // ans = rounded(ans, 7);
-        // if (ans > 999999999) {
-        //     ans = Number(ans).toExponential();
-        //     if (String(ans)[8] == ".") {
-        //         ans = String(ans).slice(0, 8);
-        //     }
-        //     else {
-        //         ans = String(ans).slice(0, 9);
-        //     }
-        // }
-        // else {
-        //     if (String(ans)[8] == ".") {
-        //         ans = String(ans).slice(0, 8);
-        //     }
-        //     else {
-        //         ans = String(ans).slice(0, 9);
-        //     }
-        // }
-        display = ans;
-        screen.innerText = display;
-        pair = [ans];
+        ans = operate(Number(pair[0]), Number(pair[0]), operator);
     }
+    ans = roundAns(ans);
+    display = ans;
+    screen.innerText = display;
+    pair = [ans];
     operator = "=";
     onOff = 0;
 })
