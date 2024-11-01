@@ -78,6 +78,7 @@ function editOp(button) {
     button.addEventListener("click", () => {
         if (pair.length == 2 && operator != "=") {
             let ans = operate(Number(pair[0]), Number(pair[1]), operator);
+            ans = roundAns(ans);
             screen.innerText = ans;
             operator = button.id;
             pair = [ans];
