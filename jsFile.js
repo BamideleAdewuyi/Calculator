@@ -16,6 +16,20 @@ function rounded(num, precision) {
     return Math.round(num * multiplier) / multiplier;
 }
 
+function roundAns(num) {
+    let cleanNum = rounded(num, 7);
+    if (cleanNum > 999999999) {
+        cleanNum = Number(cleanNum).toExponential();
+    }
+    if (String(cleanNum)[8] == ".") {
+        cleanNum = String(cleanNum).slice(0, 8);
+    }
+    else {
+        cleanNum = String(cleanNum).slice(0, 9);
+    }
+    
+    return cleanNum;
+}
 
 function operate(num1, num2, op) {
     switch(op) {
