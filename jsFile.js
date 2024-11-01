@@ -85,12 +85,14 @@ operators.forEach(op => editOp(op));
 equals.addEventListener("click", () => {
     if (pair.length == 2) {
         let ans = operate(Number(pair[0]), Number(pair[1]), operator);
+        ans = rounded(ans, 7);
         display = ans;
         screen.innerText = display;
         pair = [ans];
     }
     else {
         let ans = operate(Number(pair[0]), Number(pair[0]), operator);
+        ans = rounded(ans, 7);
         display = ans;
         screen.innerText = display;
         pair = [ans];
