@@ -1,4 +1,5 @@
-let display = 0;
+let ans = 0;
+let display = ans;
 let operator = "=";
 let pair = [];
 let onOff = 0;
