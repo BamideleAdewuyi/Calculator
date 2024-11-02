@@ -8,6 +8,7 @@ const operators = document.querySelectorAll(".operator");
 const clear = document.querySelector("#clear");
 const screen = document.querySelector("#screen");
 const equals = document.querySelector("#equals");
+const decimal = document.querySelector("#decimal");
 
 screen.innerText = display;
 
