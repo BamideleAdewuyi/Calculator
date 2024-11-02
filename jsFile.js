@@ -52,6 +52,7 @@ clear.addEventListener("click", () => {
     pair = [];
     onOff = 0;
     screen.innerText = display;
+    decimal.disabled = false;
 })
 
 function clickNums(button) {
