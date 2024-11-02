@@ -94,10 +94,6 @@ function editOp(button) {
     
 };
 
-nums.forEach(num => clickNums(num));
-
-operators.forEach(op => editOp(op));
-
 equals.addEventListener("click", () => {
     if (pair.length == 2) {
         ans = operate(Number(pair[0]), Number(pair[1]), operator);
@@ -112,3 +108,7 @@ equals.addEventListener("click", () => {
     operator = "=";
     onOff = 0;
 })
+
+nums.forEach(num => clickNums(num));
+
+operators.forEach(op => editOp(op));
