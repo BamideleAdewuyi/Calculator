@@ -109,6 +109,17 @@ equals.addEventListener("click", () => {
     onOff = 0;
 })
 
+decimal.addEventListener("click", () => {
+    if (Number.isInteger(Number(display))) {
+        display = display + '.';
+        pair[onOff] = display;
+        screen.innerText = display;
+        decimal.disabled = true;
+    }
+})
+
+// decimal.disabled = true;
+
 nums.forEach(num => clickNums(num));
 
 operators.forEach(op => editOp(op));
