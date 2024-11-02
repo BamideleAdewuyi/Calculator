@@ -18,6 +18,10 @@ button {
     width: 125px;
 }
 
+.number, #decimal {
+    width: 125px;
+}
+
 #calculator {
     outline: 2px solid  orange;
     display: flex;
