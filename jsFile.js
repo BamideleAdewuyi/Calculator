@@ -49,7 +49,7 @@ function operate(num1, num2, op) {
 
 clear.addEventListener("click", () => {
     display = 0;
-    pair = [];
+    pair = [0];
     onOff = 0;
     screen.innerText = display;
     decimal.disabled = false;
