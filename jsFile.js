@@ -58,7 +58,7 @@ clear.addEventListener("click", () => {
 function clickNums(button) {
     button.addEventListener("click", () => {
         if (String(display).length < 9) {
-            if (button.id == 0 && display == 0) {
+            if (button.id == 0 && display === 0) {
                 pair[onOff] = display;
                 return;
             }
