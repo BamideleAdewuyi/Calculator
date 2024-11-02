@@ -27,7 +27,6 @@ button {
 }
 
 #calculator {
-    outline: 2px solid  orange;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +35,6 @@ button {
 }
 
 #keyboard {
-    outline: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     height: 400px;
@@ -44,7 +42,6 @@ button {
 }
 
 #screen {
-    outline: 1px solid green;
     height: 100px;
     text-align: right;
     display: flex;
