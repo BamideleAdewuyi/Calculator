@@ -87,6 +87,7 @@ function editOp(button) {
         else {
             operator = button.id;
         }
+        decimal.disabled = false;
         onOff = 1;
         display = 0;
         
@@ -107,6 +108,7 @@ equals.addEventListener("click", () => {
     pair = [ans];
     operator = "=";
     onOff = 0;
+    decimal.disabled = false;
 })
 
 decimal.addEventListener("click", () => {
