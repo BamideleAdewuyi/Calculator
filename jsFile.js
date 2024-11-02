@@ -1,6 +1,6 @@
 let display = 0;
 let operator = "=";
-let pair = [];
+let pair = [0];
 let onOff = 0;
 
 const nums = document.querySelectorAll(".number");
