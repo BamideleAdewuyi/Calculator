@@ -16,6 +16,7 @@ button {
 .operator, #equals {
     width: 125px;
     background-color: orange;
+    color: white;
 }
 
 .number, #decimal {
