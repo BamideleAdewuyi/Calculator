@@ -62,7 +62,7 @@ function clickNums(button) {
                 pair[onOff] = display;
                 return;
             }
-            if (display == 0) {
+            if (display === 0) {
                 display = button.id;
                 pair[onOff] = display;
                 screen.innerText = display;
@@ -120,8 +120,6 @@ decimal.addEventListener("click", () => {
         decimal.disabled = true;
     }
 })
-
-// decimal.disabled = true;
 
 nums.forEach(num => clickNums(num));
 
