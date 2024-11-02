@@ -22,6 +22,10 @@ button {
     width: 125px;
 }
 
+[id="0"] {
+    width: 250px;
+}
+
 #calculator {
     outline: 2px solid  orange;
     display: flex;
