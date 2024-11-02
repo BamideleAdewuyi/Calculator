@@ -3,10 +3,15 @@ body {
     justify-content: center;
 }
 
+
 button {
     height: 50px;
     width: 50px;
     padding: 0;
+}
+
+#clear {
+    width: 375px;
 }
 
 #calculator {
