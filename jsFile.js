@@ -122,6 +122,11 @@ decimal.addEventListener("click", () => {
     }
 })
 
+backspace.addEventListener("click", () => {
+    
+})
+
+
 nums.forEach(num => clickNums(num));
 
 operators.forEach(op => editOp(op));
