@@ -137,7 +137,24 @@ backspace.addEventListener("click", () => {
 })
 
 document.body.addEventListener("keydown", (k) => {
-    
+    if (!isNaN(k.key)) {
+        if (String(display).length < 9) {
+            if (k.key == 0 && display === 0) {
+                pair[onOff] = display;
+                return;
+            }
+            if (display === 0) {
+                display = k.key;
+                pair[onOff] = display;
+                screen.innerText = display;
+            }
+            else {
+                display = display + '' + k.key;
+                pair[onOff] = display;
+                screen.innerText = display;
+            }
+        }
+    }
 })
 
 nums.forEach(num => clickNums(num));
