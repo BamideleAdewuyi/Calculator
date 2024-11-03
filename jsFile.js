@@ -155,6 +155,27 @@ document.body.addEventListener("keydown", (k) => {
             }
         }
     }
+    if (k.key == "Backspace") {
+        if (display !== 0) {
+            if (display.length > 1) {
+                display = display.slice(0, display.length - 1);
+                screen.innerText = display;
+            }
+            else {
+                display = 0;
+                screen.innerText = display;
+            }
+            pair[onOff] = display;
+        }
+    }
+    if (k.key == ".") {
+        if (Number.isInteger(Number(display))) {
+            display = display + '.';
+            pair[onOff] = display;
+            screen.innerText = display;
+            decimal.disabled = true;
+        }
+    }
 })
 
 nums.forEach(num => clickNums(num));
