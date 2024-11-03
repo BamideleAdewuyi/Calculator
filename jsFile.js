@@ -136,6 +136,9 @@ backspace.addEventListener("click", () => {
     }
 })
 
+document.body.addEventListener("keydown", (k) => {
+    
+})
 
 nums.forEach(num => clickNums(num));
 
