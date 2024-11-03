@@ -20,7 +20,7 @@ button {
     color: white;
 }
 
-.number, #decimal {
+.number, #decimal, #backspace {
     width: 125px;
 }
 
