@@ -9,6 +9,7 @@ const clear = document.querySelector("#clear");
 const screen = document.querySelector("#screen");
 const equals = document.querySelector("#equals");
 const decimal = document.querySelector("#decimal");
+const backspace = document.querySelector("#backspace");
 
 screen.innerText = display;
 
