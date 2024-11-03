@@ -125,6 +125,9 @@ decimal.addEventListener("click", () => {
 backspace.addEventListener("click", () => {
     if (display !== 0) {
         if (display.length > 1) {
+            if (String(display).slice(-1) == ".") {
+                decimal.disabled = false;
+            }
             display = display.slice(0, display.length - 1);
             screen.innerText = display;
         }
@@ -158,6 +161,9 @@ document.body.addEventListener("keydown", (k) => {
     if (k.key == "Backspace") {
         if (display !== 0) {
             if (display.length > 1) {
+                if (String(display).slice(-1) == ".") {
+                    decimal.disabled = false;
+                }
                 display = display.slice(0, display.length - 1);
                 screen.innerText = display;
             }
