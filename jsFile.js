@@ -123,7 +123,17 @@ decimal.addEventListener("click", () => {
 })
 
 backspace.addEventListener("click", () => {
-    
+    if (display !== 0) {
+        if (display.length > 1) {
+            display = display.slice(0, display.length - 1);
+            screen.innerText = display;
+        }
+        else {
+            display = 0;
+            screen.innerText = display;
+        }
+        pair[onOff] = display;
+    }
 })
 
 
