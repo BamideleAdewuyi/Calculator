@@ -175,11 +175,13 @@ document.body.addEventListener("keydown", (k) => {
         }
     }
     if (k.key == ".") {
-        if (Number.isInteger(Number(display))) {
-            display = display + '.';
-            pair[onOff] = display;
-            screen.innerText = display;
-            decimal.disabled = true;
+        if (String(display).slice(-1) != ".") {
+            if (Number.isInteger(Number(display))) {
+                display = display + '.';
+                pair[onOff] = display;
+                screen.innerText = display;
+                decimal.disabled = true;
+            }
         }
     }
 })
